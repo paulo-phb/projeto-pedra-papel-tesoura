@@ -1,5 +1,3 @@
-// view
-
 class jogoView {
     constructor() {
         this.pedra = document.querySelector("#pedra");

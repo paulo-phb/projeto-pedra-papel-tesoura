@@ -1,4 +1,3 @@
-// model
 class jogoModel {
     constructor() {
         this.pontosComputador = 0
@@ -10,7 +9,7 @@ class jogoModel {
         let numeroAleatorio = Math.floor(Math.random() * 3);
         let escolha = this.escolhas[numeroAleatorio];
 
-        return {escolha: escolha, imagem: `images/${escolha}.png`};
+        return { escolha: escolha, imagem: `images/${escolha}.png` };
     }
 
     jogarRodada(escolhaJogador, escolhaComputador) {
@@ -27,7 +26,7 @@ class jogoModel {
 
         mensagem = `Computador escolheu ${escolhaComputador}, você ${resultado}!`;
 
-        return {resultado: resultado, mensagem: mensagem};
+        return { resultado: resultado, mensagem: mensagem };
     }
 
     atualizarPontos(resultado) {

@@ -1,5 +1,3 @@
-// controller
-
 class jogoController {
     constructor(model, view) {
         this.model = model;
@@ -10,11 +8,11 @@ class jogoController {
         this
             .view
             .addClickEventToButtons((selecaoJogador) => {
-                this.playGame(selecaoJogador);
+                this.iniciarJogo(selecaoJogador);
             });
     }
 
-    playGame(selecaoJogador) {
+    iniciarJogo(selecaoJogador) {
         let escolhaComputador = this
             .model
             .pegarEscolhaComputador();
@@ -23,12 +21,17 @@ class jogoController {
             .jogarRodada(selecaoJogador, escolhaComputador.escolha);
 
         this
+            .model
+            .atualizarPontos(resultado.resultado);
+
+        this
+            .view
+            .mostrarMensagem(resultado.mensagem);
+
+        this
             .view
             .destacarResutado(resultado.resultado);
 
-        this
-            .model
-            .atualizarPontos(resultado.resultado);
         this
             .view
             .atualizarPlacar(this.model.pontosJogador, this.model.pontosComputador);
