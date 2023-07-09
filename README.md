@@ -3,4 +3,4 @@ projeto para a diciplina de lógica de programação IFPI
 
 #acessar projeto ao vivo
 
-https://www.paulo.phb.github.io/projeto-pedra-papel-tesoura
+www.paulo.phb.github.io/projeto-pedra-papel-tesoura
